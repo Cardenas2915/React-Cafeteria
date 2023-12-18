@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Modal from "react-modal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
-import Sidebar from "../components/sidebar";
+import Sidebar from "../components/Sidebar";
 import Resumen from "../components/Resumen";
 import ModalProducto from "../components/ModalProducto";
 import useQuiosco from "../hooks/useQuiosco";
@@ -23,7 +23,7 @@ Modal.setAppElement("#root");
 
 export default function layouts() {
 
-	const {user, error} = useAuth({middleware: 'auth'})
+	useAuth({middleware: 'auth'})
 	const { modal, handleClickModal } = useQuiosco();
 
 	return (
